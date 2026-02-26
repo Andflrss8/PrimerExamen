@@ -90,10 +90,12 @@ namespace PrimerExamen
                         porcentaje = 35.00;
                     }
                     double isr = cuota + (sueldo - inferior) * (porcentaje / 100);
+                    
+                    
 
-                    txtExcedente.Text = (sueldo - inferior) + "";
-                    txtIsr.Text = isr + "";
-                    txtNeto.Text = (sueldo - isr) + "";
+                    txtExcedente.Text = Double.Round((sueldo - inferior),2) + "";
+                    txtIsr.Text = Double.Round(isr,2) + "";
+                    txtNeto.Text = Double.Round((sueldo - isr),2) + "";
                 }
             }
             catch (Exception ex)
